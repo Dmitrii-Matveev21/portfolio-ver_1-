@@ -1,0 +1,218 @@
+*{
+    box-sizing: border-box;
+}
+section{
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+button{
+    background-color: #1a2a3a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: all 0.3S ease;
+}
+button:hover{
+    transform: translateY(-3px);
+}
+.menu-btn{
+    display: none;
+}
+
+body {
+    font-family: 'Inter',Arial,sans-serif;
+    background-color: #f5f5f5;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+/* Делаем все медиафайлы адаптивными под ширину экрана */
+img, iframe, video, audio {
+    max-width: 100%;
+    width: 100%; /* Заставляет аудио и видео растягиваться ровно по ширине карточки */
+}
+h1,h2,h3{
+    font-weight: 700;
+    color: #1a2a3a;
+}
+a{
+    text-decoration: none;
+}
+.my-table{
+    background-color: rgb(252, 24, 24);
+    border-radius: 6px;
+}
+header h1,header h2{
+    color: #ffffff;
+}
+ol{
+    list-style-type: none;
+}
+/* Обычное состояние */
+.shapka a {
+    color: #ffffff;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+/* При наведении — меняем цвет на акцентный */
+.shapka a:hover {
+    color: #ff9800;
+}
+.shapka{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+.dev-list{
+    flex-wrap: wrap; /*разрешение переноса*/
+    gap: 15px; /*отсутупы между карточками*/
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1a2a3a;
+    padding: 30px 20px;
+    text-align: center;
+    z-index: 100;
+}
+/* Обычное состояние */
+.dev-list li {
+    flex-grow: 1;
+    background-color: #1a2a3a;
+    padding: 12px 20px;
+    border-radius: 6px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+/* При наведении — делает фон чуть светлее */
+.dev-list li:hover {
+    background-color: #2a3a4a;
+    transform: translateY(-5px);
+}
+.dev-list li a{
+    color: #ffffff;
+    font-weight: 600; /*полужирный шрифт*/
+}
+main{
+    margin-top:  210px;;
+}
+/* Обычное состояние */
+.btn-top {
+    background-color: antiquewhite;
+    color: black;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 6px;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+}
+
+/* При наведении — меняем фон и цвет текста */
+.btn-top:hover {
+    background-color: #1a2a3a;
+    color: #ffffff;
+    transform: scale(1.05);
+}
+.active-btn{
+    background-color: #27ae60 !important;
+    color: #ffffff !important;
+    transform: scale(1.1);
+}
+html{
+    scroll-behavior: smooth;
+}
+@media (max-width: 600px) {
+     input[type="text"],
+     input[type="email"],
+     textarea{
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+     }
+    /* Эти стили применятся ТОЛЬКО если ширина экрана 600px или меньше */
+    body {
+        background-color: lightgray;
+    }
+    header {
+        position: static;
+        padding: 15px 10px;
+    }
+    section{
+        margin: 10px;
+        padding: 15px;
+    }
+    .shapka{
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+    .shapka.show{
+        display: flex;
+    }
+    main{
+        margin-top: 20px;
+    }
+    .btn-top{
+        bottom: 10px;
+        right: 10px;
+    }
+    .menu-btn{
+        display: inline-block;
+        margin-bottom: 10px;
+        background-color: #2a3a4a;
+        color: #ffffff;
+        border: 1px solid #ffffff;
+        padding: 8px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .dev-list li{
+        width: 100%;
+    }
+}
+/* Контейнер для карточек */
+.project-containers{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px; /* делает отступ 15 пикселей сверху от заголовка «Мои проекты» до самого списка карточек */
+}
+/* Карточка проекта */
+.project-card{
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;   /*делает тонкую серо-бежевую рамку толщиной 1px вокруг всей карточки.*/
+    border-radius: 6px;
+    border-left: 5px solid #1a2a3a; /* перекрывает левую рамку и делает её толстой (5px) и темно-синей */
+    padding: 15px;
+    /* умная растяжка: каждая карточка пытается быть шириной минимум 200px, но если на экране есть свободное место, они равномерно растягиваются, заполняя всю ширину. */
+    flex: 1 1 200px;
+    transition: transform 0.3s ease;
+}
+/* Эффект при наведении */
+.project-card:hover{
+    transform: translateY(-5px);
+}
+.project-card h3{
+    margin-top: 0; /*убирает стандартный отступ сверху у заголовка <h3>, чтобы он не «отталкивал» верхний край карточки*/
+    color: #1a2a3a;
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="style.css">
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Дима-портфолио</title>
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+     <header>
+         <h1>Дима</h1>
+         <h2>IT специалист</h2>
+         <!-- Навигация -->
+          <button class="menu-btn">☰ Меню</button>
+          <nav>
+            <ul class="shapka">
+                <li><a href="index.html">главная</a></li>
+                <li><a href="about.html">обо мне</a></li>
+                <li><a href="contacts.html">контакты</a></li>
+            </ul>
+          </nav>
+     </header>
+     <!--основное содержимое страницы-->
+     <main>
+
+        <!--Раздел 1 обо мне-->
+        <section>
+             <h2>Про меня</h2>
+             <p>Я решил освоить этот язык для учебы,и <strong>потому что он мне нужен для учебы</strong> и так же, <em> для будущего</em>.</p>
+             <h3>Мой стек технологий для изучения:</h3>
+             <ul>
+                 <li>HTML5</li>
+                 <li>CSS3</li>
+                 <li>git</li>
+             </ul>
+
+             <h3>План на эту неделю</h3>
+             <ol>
+                 <li>изучить базовые теги</li>
+                 <li>Разобраться вместе со списками и ссылками</li>
+                 <li>Освоить работы вместе картинками и формами</li>
+             </ol>
+
+             <h3>3 главные цели в IT</h3>
+             <ol>
+                 <li>Много денег</li>
+                 <li>Быть востребованным на рынке труда</li>
+                 <li>Для будущего</li>
+             </ol>
+             <h3>3 любимых сайтов или сервисов</h3>
+             <ul>
+                  <li><a href="https://genshin.hoyoverse.com/ru/home" target="_blank" rel="noopener noreferrer">genshin</a></li>
+                 <li><a href="https://zenless.hoyoverse.com/en-us/" target="_blank" rel="noopener noreferrer">zenless</a></li>
+                 <li><a href="https://wutheringwaves.kurogames.com/en/" target="_blank" rel="noopener noreferrer">wutheringwaves</a></li>
+             </ul>
+        </section>
+
+        <!--Раздел 2 медиа-->
+        <section>
+             <h2>Мои медиафайлы</h2>
+             <article>
+                 <h3>Аватар</h3>
+                 <img src="images/Nicole.jpg" alt="Аватар димы" width="200">
+                 <h3>Наши разработчики</h3>
+                 <ul class="dev-list">
+                     <li><a href="about.html">FrontEnd</a></li>
+                     <li><a href="second.html">BackEnd</a></li>
+                 </ul>
+                 <h3>контакты разработчиков</h3>
+                 <ul>
+                    <li><a href="contacts.html"><img src="images/Nicole.jpg" alt="Ссылка на картинку" width="125">FrontEnd</a></li>
+                 </ul>
+             </article>
+         </section>
+
+        <!--Ресурсы-->
+        <section>
+             <h3>Нашa музыка</h3>
+             <audio src="audio/Glass Awake.mp3" controls></audio>
+             <h3>Локальное видео</h3>
+             <video src="video/skirk.mp4" controls width="400" muted></video>
+             <h3>Видео с ютуб(тег:iframe)</h3>
+             <iframe 
+             width="400" height="250"
+             title="Ютуб видеоплеер"
+             allow="accelerometer; autoplay;clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+             src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+             frameborder="0"
+             allowfullscreen>
+             </iframe>
+        </section>
+
+        <!--секция с таблицей-->
+        <section>
+            <h2>мои навыки</h2>
+            <table class="my-table">
+                <thead>
+                    <tr>
+                         <th>Технология</th>
+                         <th>уровень</th>
+                         <th>статус</th>
+                        </tr>
+                </thead>
+                    <tbody>
+                        <tr>
+                            <td>HTML5</td>
+                            <td>уверенный базовый</td>
+                            <td>почти закончил</td>
+                         </tr>
+                         <tr>
+                            <td>CSS3</td>
+                            <td>в процессе</td>
+                            <td>начинаю</td>
+                        </tr>
+                        <tr>
+                            <td>git</td>
+                            <td>в процессе</td>
+                            <td>скоро будет</td>
+                        </tr>
+                    </tbody>
+            </table>
+        </section>
+        <section>
+            <h2>Форма обратной связи</h2>
+            <form action="#" method="post">
+                 <p>
+                     <label for="username">Имя:</label><br>
+                     <input type="text" id="username" name="username" placeholder="введите ваше Имя">
+                 </p>
+                 <p>
+                     <label for="useremail">email</label><br>
+                     <input type="email" id="useremail" name="useremail" placeholder="введите имаил" required>
+                 </p>
+                 <p>
+                     <label for="usermessage">сообщение</label><br>
+                     <textarea id="usermessage" name="usermessage" rows="4" placeholder="ваше сообщение"></textarea>
+                 </p>
+                     <button type="submit">Отправить</button>
+            </form>
+        </section>
+        <section>
+            <h2>Мои проекты</h2>
+            <div class="projects-container"></div>
+        </section>
+     </main>
+
+     <!--Подвал сайта-->
+     <footer>
+        <p>&copy; 2026 Дима. Все права защищены.</p>
+     </footer>
+     <a href="#" class="btn-top">↑ Наверх</a>
+<script src="script.js" ></script>
+</body>
+</html>
